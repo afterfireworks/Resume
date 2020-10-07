@@ -1,0 +1,122 @@
+/* CSS Document */
+
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+.jumbotron {
+    background-image: url("https://picsum.photos/1200/400?=15");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 0;
+    color: white;
+}
+
+/* breadcrumb-box */
+.breadcrumb-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumb-box .breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+/* .breadcrumb-box .breadcrumb a{
+    color: white;
+}
+.breadcrumb-item.active{
+    color: white;
+} */
+
+
+.parttell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+}
+
+h2 {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+/* poduct */
+.product {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5vh 0 3vh 0;
+}
+
+.product p {
+    max-width: 80%;
+}
+
+
+/* white-box */
+.white-box {
+    display: flex;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 5vh auto;
+
+}
+
+.white-box::-webkit-scrollbar {
+    width: 1px;
+}
+
+.white-box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.white-box::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.white-box::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.white-item {
+    width: 300px;
+    height: 300px;
+    display: inline-flex;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("https://picsum.photos/1200/100?radom=1");
+    background-size: cover;
+    color: white;
+}
+
+.footer p {
+    /* padding: 1vh 1vw; */
+    margin-top: 1rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+.footer span {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.row .col-12 h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+}
+.row .col-12 p{
+    padding: 1rem;
+}

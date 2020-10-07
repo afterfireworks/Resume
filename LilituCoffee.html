@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta name="viewport" content="text/html; charset=utf-8;width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+        http-equiv="Content-Type">
+    <title>Lilitu Coffee</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/LilituCoffee.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);</script>
+    <!-- Noto Sans -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC|Noto+Sans+TC"
+        rel="stylesheet">
+
+</head>
+
+<body touchstart>
+
+    
+<!-- loading -->
+<div id="loading">
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="loading-word">
+        <p>Loading</p>
+    </div>
+</div>
+<style type="text/css">
+    #loading {
+        height: 100%;
+        width: 100%;
+        overflow-y: hidden;
+        position: fixed;
+        z-index: 100;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/loading-phone.png);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .lds-ring {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: 5vh 0;
+    }
+
+    .lds-ring div {
+        box-sizing: border-box;
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        margin: 4px;
+        border: 4px solid #000;
+        border-radius: 50%;
+        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: #000 transparent transparent transparent;
+    }
+
+    .lds-ring div:nth-child(1) {
+        animation-delay: -0.45s;
+    }
+
+    .lds-ring div:nth-child(2) {
+        animation-delay: -0.3s;
+    }
+
+    .lds-ring div:nth-child(3) {
+        animation-delay: -0.15s;
+    }
+
+    @keyframes lds-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @media (min-width : 1024px) {
+        #loading {
+            background-image: url(images/loading-web.png);
+            background-size:contain;
+            background-position: left center;
+        }
+    }
+</style>
+<script>
+    window.onload = function () {
+        $("#loading").hide();
+    };
+</script>
+<!-- loading -->
+
+
+    <header>
+        <div class="logo">Lilitu x Coffee</div>
+    </header>
+    <main>
+
+        <div class="banner">
+            <div class="banner-title">
+                <p style="opacity: .8;" data-aos="fade-down-right" data-aos-offset="50" data-aos-duration="1000">We're
+                    Not</p>
+                <p style="margin-left: 3rem;" data-aos="fade-up-right" data-aos-offset="50" data-aos-duration="3000">We
+                    Say We Are</p>
+            </div>
+        </div>
+
+        <div class="buttonmenu">
+            <div class="floatbutton" id="floatbutton1">
+                <p>特選</p>
+                <p>商品</p>
+            </div>
+            <div class="gotobuttom floatbutton" id="gotobuttom">
+                <p>關於</p>
+                <p>我們</p>
+            </div>
+        </div>
+
+        <div class="bannerbottom"><img src="images/LilituCoffee/focus-01.png" alt=""></div>
+
+        <div class="line leftcontainer">
+            <p data-aos="zoom-out" data-aos-offset="50" data-aos-duration="2500">人來人往，你淡淡地看著，除了手中的咖啡，當下沒有其他重要的。</p>
+        </div>
+
+        <div class="focus">
+            <p>Lilitu x Coffee</p>
+        </div>
+
+        <div class="wrap">
+            <div class="item img"><img src="images/LilituCoffee/Peru.jpg" alt=""></div>
+            <div class="item txt" data-aos="fade" data-aos-duration="1000">
+                <h3>選豆</h3>
+                <span>Pick beans</span>
+                <p>咖啡的篩選和等級是根據豆的顆粒大小和濃度來決定的，另外也取決於一磅豆內有多少的缺點豆（ 成熟豆下面碎掉的豆，等等
+                    ）。就像是最好的葡萄酒，專業咖啡在生產過程中謹慎細心處理，可以從豆的品質上看得出來，因為產品上會有獨特的表徵，它代表著產地，氣候和種植者的不同狀況。
+                </p>
+            </div>
+        </div>
+
+        <div class="wrap even">
+            <div class="item img"><img src="images/LilituCoffee/Dark Roast.jpg" alt=""></div>
+            <div class="item txt" data-aos="fade" data-aos-duration="1000">
+                <h3>深焙</h3>
+                <span>Dark Roast</span>
+                <p>City，Full City，French，Espresso
+                    等都是因為所用的烘焙機和出產地區的不同而產生不同烘焙程度的顏色。即使顏色看起來一樣，咖啡可能會有完全不同的風味。所選擇豆的種類，烘焙熱度及烘焙方式，烘焙時間的長短都是決定最後風味的主要因素，溫度的控制必須要靠經驗的累積。
+                </p>
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="item img"><img src="images/LilituCoffee/Turkish.jpg" alt=""></div>
+            <div class="item txt" data-aos="fade" data-aos-duration="1000">
+                <h3>極細研磨</h3>
+                <span>Turkish</span>
+                <p>研磨後的咖啡粉與咖啡豆相較之下，接觸空氣的表面積增加造成氧化速度會倍數成長，咖啡保存時間減少，風味也會因溫度有所改變。在沖泡時，咖啡也會依研磨粗細程度透析萃取咖啡，不同的研磨程度的沖煮水溫與方式也會影響咖啡的風味。因此歸納的基本法是研磨程度愈細，苦味愈強；反之，研磨程度愈粗，苦味愈淡。
+                </p>
+            </div>
+        </div>
+
+        <div class="wrap even">
+            <div class="item img"><img src="images/LilituCoffee/Pour Over.jpg" alt=""></div>
+            <div class="item txt" data-aos="fade" data-aos-duration="1000">
+                <h3>手沖</h3>
+                <span>Pour Over</span>
+                <p>手沖咖啡可以控制萃取結果的特性，是手沖的優點也是其最麻煩的地方，因為有這麼多變因要考慮，包含研磨粗細、粉水比、水溫等等，但只要了解變因之間的關係，就可以掌握沖出來的咖啡風味。手沖的最大媚力在於能喝到普通所認知下咖啡的其它多種風味，果酸也好，堅果味也罷，豐富而多層次，前中後味都非常明顯。
+                </p>
+            </div>
+        </div>
+
+        <div class="line rightcontainer">
+            <p data-aos="zoom-out" data-aos-offset="50" data-aos-duration="2500">每顆豆子，於各種過程中洗鍊，香味與醇苦都是印記，人生也是。</p>
+        </div>
+
+        <div class="focus" id="focustop">
+            <p>精選 x 咖啡豆</p>
+        </div>
+
+        <div class="owl-carousel nonloop" data-aos="zoom-in">
+            <div class="item"><img src="images/LilituCoffee/beans1.png" alt="">
+                <div class="sale">
+                    <div class="name">摩卡</div>
+                    <div class="price">＄220 ( 5oz )</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/beans2.png" alt="">
+                <div class="sale">
+                    <div class="name">阿拉比卡</div>
+                    <div class="price">＄240 ( 5oz )</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/beans3.png" alt="">
+                <div class="sale">
+                    <div class="name">肯亞</div>
+                    <div class="price">＄250 ( 5oz )</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/beans4.png" alt="">
+                <div class="sale">
+                    <div class="name">藍山</div>
+                    <div class="price">＄220 ( 5oz )</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/beans5.png" alt="">
+                <div class="sale">
+                    <div class="name">曼特寧</div>
+                    <div class="price">＄220 ( 5oz )</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="owl-carousel owl-theme owl-loaded ">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item">商品1</div>
+                    <div class="owl-item">商品2</div>
+                    <div class="owl-item">商品3</div>
+                    <div class="owl-item">商品4</div>
+                    <div class="owl-item">商品5</div>
+                </div>
+            </div>
+            <div class="owl-nav">
+                <div class="owl-prev">prev</div>
+                <div class="owl-next">next</div>
+            </div>
+            <div class="owl-dots">
+                <div class="owl-dot active"><span></span></div>
+                <div class="owl-dot"><span></span></div>
+                <div class="owl-dot"><span></span></div>
+            </div>
+        </div> -->
+
+        <div class="focus">
+            <p>當日 x 無菜單</p>
+        </div>
+
+        <div class="owl-carousel nonloop" data-aos="zoom-in">
+            <div class="item"><img src="images/LilituCoffee/cookie1.png" alt="">
+                <div class="sale">
+                    <div class="name">當日隨機</div>
+                    <div class="price">限量提供</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/cookie2.png" alt="">
+                <div class="sale">
+                    <div class="name">當日隨機</div>
+                    <div class="price">限量提供</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/cookie3.png" alt="">
+                <div class="sale">
+                    <div class="name">當日隨機</div>
+                    <div class="price">限量提供</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/cookie4.png" alt="">
+                <div class="sale">
+                    <div class="name">當日隨機</div>
+                    <div class="price">限量提供</div>
+                </div>
+            </div>
+            <div class="item"><img src="images/LilituCoffee/cookie5.png" alt="">
+                <div class="sale">
+                    <div class="name">當日隨機</div>
+                    <div class="price">限量提供</div>
+                </div>
+            </div>
+        </div>
+        <div class="line leftcontainer">
+            <p data-aos="zoom-out" data-aos-offset="50" data-aos-duration="2500"></p>
+        </div>
+        <div id="target"></div>
+
+    </main>
+
+    <footer>
+        <div class="link">
+            <a href=""><img src="images/LilituCoffee/line.png" alt=""></a>
+            <a href=""><img src="images/LilituCoffee/facebook.png" alt=""></a>
+            <a href=""><img src="images/LilituCoffee/instagram.png" alt=""></a>
+            <a href=""><img src="images/LilituCoffee/mail.png" alt=""></a>
+            <a href=""><img src="images/LilituCoffee/youtube.png" alt=""></a>
+        </div>
+        <div class="info">
+            <div class="word">
+                <p>屏東縣屏東市勝利路77號</p>
+                <p>0909778899</p>
+                <p>( 08) 7788990</p>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6191.179364519895!2d120.48576111998743!3d22.67997489572281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1799571821b7%3A0x81dba3c7cd11bc99!2zSS9vIHN0dWRpb-Wxj-adsee4o-mdkuWJteiBmuiQvQ!5e0!3m2!1szh-TW!2stw!4v1591519824534!5m2!1szh-TW!2stw"
+                    width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+        <p class="design">&copy;2020　All Rights Reserved ｜ 煙火之後 「 穆 」</p>
+    </footer>
+
+    <!-- jquery -->
+
+    <script src="js/HiddenHeaderAuto.js"></script>
+    <script src="js/ScrollTo.js"></script>
+    <script src="js/HiddenClassWhenButtom.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script>
+        document.body.addEventListener('touchstart', function () {});
+    </script> -->
+    <script>
+        AOS.init({
+            // Global settings:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 200, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+    </script>
+    <script src="js/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $('.loop').owlCarousel({
+            center: true,
+            items: 5,
+            loop: true,
+            margin: 10,
+            responsive: {
+                600: {
+                    items: 3
+                }
+            }
+        });
+        $('.nonloop').owlCarousel({
+            center: true,
+            items: 5,
+            loop: false,
+            margin: 10,
+            responsive: {
+                600: {
+                    items: 3
+                }
+            }
+        });
+        var owl = $('.owl-carousel');
+        owl.owlCarousel();
+        // Go to the next item
+        $('.customNextBtn').click(function () {
+            owl.trigger('next.owl.carousel');
+        })
+        // Go to the previous item
+        $('.customPrevBtn').click(function () {
+            // With optional speed parameter
+            // Parameters has to be in square bracket '[]'
+            owl.trigger('prev.owl.carousel', [300]);
+        })
+    </script>
+    <script src="js/L2Dwidget.0.min.js"></script>
+    <script src="js/L2Dwidget.min.js"></script>
+    <script type="text/javascript">
+      L2Dwidget.init({
+        model: {
+          jsonPath: 'images/LilituCoffee/Blackcat Tororo/tororo.model.json',
+        },
+        display: {
+          superSample: 2,
+          width: 200,
+          height: 200,
+          position: 'left',
+          hOffset: 10,
+          vOffset: 10,
+        },
+        mobile: {
+          show: true,
+          scale: 1,
+          motion: true,
+        },
+        react: {
+          opacityDefault: 1,
+          opacityOnHover: 0.5,
+        }
+      })
+    </script>
+
+</body>
+
+</html>

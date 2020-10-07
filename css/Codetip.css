@@ -1,0 +1,12 @@
+/* CSS Document */
+.container{
+    overflow-x: hidden
+}
+.nav-item{
+}
+.tip-section{
+    padding-top: 5vh;
+}
+pre{
+    margin-left: -10vw;
+}

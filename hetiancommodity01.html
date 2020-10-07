@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>禾田韭菜錠</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/hetiancommodity.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+</head>
+
+<body>
+    <!-- loading -->
+    <div id="loading">
+        <img src="images/hetiancommodity/Logo.png" alt="">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loading-word">
+            <p>Loading</p>
+        </div>
+    </div>
+    <style type="text/css">
+        #loading {
+            height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+            position: fixed;
+            z-index: 100;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loading img {
+            width: 40vw;
+            height: auto;
+        }
+
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            margin: 5vh 0;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            margin: 4px;
+            border: 4px solid #000;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #000 transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (min-width : 1024px) {
+            #loading img {
+                width: 15vw;
+                height: auto;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            $("#loading").hide();
+        };
+    </script>
+    <!-- loading -->
+
+    <div class="container">
+
+        <div class="commodity">
+
+            <div class="banner">
+                <div class="banner-float">
+                    <img src="images/hetiancommodity/float-01.png" alt="">
+                </div>
+            </div>
+            <div class="commodity-detail">
+                <h1>禾田韭菜營養錠</h1>
+                <ul>
+                    <li>增強人體的免疫能力，預防腫瘤細胞重生率。</li>
+                    <li>增進食慾，促進消化降血脂、血壓及動脈硬化、抑制多種病菌。</li>
+                    <li>改善溫差性感冒和腰膝酸痛。</li>
+                    <li>改善血壓，對骨骼、牙齒的形成，助長兒童骨牙血之生長發育。</li>
+                </ul>
+                <div class="preice">售價 NT. 980</div>
+            </div>
+        </div>
+
+
+
+
+        <div id="jquery-tabs">
+
+            <div id="tabs-nav">
+                <a href="#tab0" class="tabs-menu tabs-menu-active">
+                    商品<br>詳細</a>
+                <a href="#tab1" class="tabs-menu">產品<br>特色</a>
+                <a href="#tab2" class="tabs-menu">無毒<br>農業</a>
+                <a href="#tab3" class="tabs-menu">運送<br>說明</a>
+            </div>
+
+            <div class="tabs-container">
+
+                <div id="tab0" class="tabs-panel" style="display:block">
+                    <div class="detailed-introduction">
+                        <div class="txt column" style="padding-bottom: 15vh">
+                            <h3>本草綱目紀載</h3>
+                            <p style="padding-left: 10%;">【 釋名 】草鐘乳（ 《 拾遺 》 ）、<br>
+                                起陽草（ 侯氏《 藥譜 》 ）<br>
+                                藏器曰︰俗謂韭葉是草鐘乳，言其溫補也。<br>
+                                時珍曰︰韭之莖名韭白，根名韭黃，花名韭菁。<br>
+                                《 禮記 》謂韭為豐本，言其美在根也。<br>
+                                溫中下氣，補虛益陽，調和臟腑。<br>
+                                充肺氣，除心腹痼冷癖。<br>
+                                歸腎壯陽，止洩精，暖腰膝（ 寧原 ）。<br>
+                            </p>
+                        </div>
+                        <div class="txt" style="padding-bottom: 15vh">
+                            <p style="padding:0 15%">
+                                健康的身體與飲食和生活習慣息息相關，而當我們注重在運動與作息調整的同時，卻往往忽略了飲食才是一切的基礎。<br>
+                                適當的營養補充可以幫助我們調節因為突發狀況為身體帶來的負面影響，同時增強運動為我們帶來的幫助，讓注重身體健康的你更能事半功倍。<br>
+                                但人在不同年紀往往會有各種困擾，禾田為您準備好了！
+                            </p>
+                        </div>
+                        <div class="txt row">
+                            <div class="cube" style="background-image: url(images/hetiancommodity/0-01.jpg);">
+                                <div class="mask">
+                                    <h3>孩子挑食?</h3>
+                                    <p>以補充錠形式替孩子克服味道問題，改善因消化不良引起的腹脹和食欲不振，增強消化。</p>
+                                </div>
+                            </div>
+                            <div class="cube" style="background-image: url(images/hetiancommodity/0-02.jpg);">
+                                <div class="mask">
+                                    <h3>老人口齒不便?</h3>
+                                    <p>讓口齒不便的老人都可輕鬆吞服，增進纖維攝取，和乳酸菌一同促進腸胃蠕動，改善便秘問題。</p>
+                                </div>
+                            </div>
+                            <div class="cube" style="background-image: url(images/hetiancommodity/0-03.jpg);">
+                                <div class="mask">
+                                    <h3>免疫力下降?</h3>
+                                    <p>韭菜可改善溫差性感冒和腰膝酸痛，每 100g 其含鉀量高（ 380-450mg 間 ），鈉
+                                        36-40mg，是天然鉀鈉平衡食物。此外還有清熱去毒的作用，其所含有的硫化合物成分，具有殺菌消炎功能。</p>
+                                </div>
+                            </div>
+                            <div class="cube" style="background-image: url(images/hetiancommodity/0-04.jpg);">
+                                <div class="mask">
+                                    <h3>膳食纖維不足?</h3>
+                                    <p>韭菜熱量低、水份高、纖維好，常為美容、消脂、減肥通便者採用。每 100g 韭菜內含 0.9g 粗纖維和 2.4g
+                                        膳食纖維，讓生活繁忙不便的你提供更輕鬆的攝取方式。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div id="tab1" class="tabs-panel">
+                    <div class="item Certification" style="margin-bottom: 15vh;">
+                        <h3>國家安全認證</h3>
+                        <p>SGS國家認證，生產流程符合 ISO22000 及 HACCP 讓您更放心。</p>
+                        <div class="pic Certification">
+                            <img src="images/hetiancommodity/SGS-01.png" alt="">
+                            <img src="images/hetiancommodity/SGS-02.png" alt="">
+                            <a data-fancybox="gallery" href="images/hetiancommodity/factory-01.jpg"><img
+                                    src="images/hetiancommodity/factory-01.jpg" alt=""></a>
+                            <a data-fancybox="gallery" href="images/hetiancommodity/factory-02.jpg"><img
+                                    src="images/hetiancommodity/factory-02.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="item extraction">
+                        <h3>專利萃取技術</h3>
+                        <p>低溫乾燥保證韭菜營養成分的萃取以功能的保留，每十五公斤的韭菜萃取成一公斤韭菜粉後，再添加乳酸菌促進吸收，保留了自然的顏色與最好的效果。<br>
+                            <span>※因此每批藥錠顏色將視當季韭菜生長不同而略有差異。</span></p>
+                        <div class="pic">
+                            <a data-fancybox="gallery" href="images/hetiancommodity/extraction.jpg"><img
+                                    src="images/hetiancommodity/extraction.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <!-- <div class="item">
+                        <h3>預留</h3>
+                        <p>說明</p>
+                        <div class="pic"></div>
+                    </div> -->
+
+                </div>
+
+
+                <div id="tab2" class="tabs-panel">
+
+                    <div class="tab2-img1" style="margin-bottom: 10vh;">
+                        <h3>無農藥、無汙染</h3>
+                        <div class="item"><a data-fancybox="gallery" href="images/hetiancommodity/1-01.jpg"><img
+                                    src="images/hetiancommodity/1-01.jpg" alt=""></a>
+                            <div class="exp">農田一景</div>
+                        </div>
+                        <div class="item"><a data-fancybox="gallery" href="images/hetiancommodity/1-02.jpg"><img
+                                    src="images/hetiancommodity/1-02.jpg" alt=""></a>
+                            <div class="exp">無農藥種植</div>
+                        </div>
+                        <div class="item"><a data-fancybox="gallery" href="images/hetiancommodity/1-03.jpg"><img
+                                    src="images/hetiancommodity/1-03.jpg" alt=""></a>
+                            <div class="exp">無汙染殘留</div>
+                        </div>
+                        <div class="item"><a data-fancybox="gallery" href="images/hetiancommodity/1-04.jpg"><img
+                                    src="images/hetiancommodity/1-04.jpg" alt=""></a>
+                            <div class="exp">韭菜收成</div>
+                        </div>
+                    </div>
+
+                    <div class="tab2-img2">
+                        <h3>多方檢驗報告</h3>
+                        <a data-fancybox="gallery" href="images/hetiancommodity/2-01.jpg"><img
+                                src="images/hetiancommodity/2-01.jpg" alt=""></a>
+                        <a data-fancybox="gallery" href="images/hetiancommodity/2-02.jpg"><img
+                                src="images/hetiancommodity/2-02.jpg" alt=""></a>
+                        <a data-fancybox="gallery" href="images/hetiancommodity/2-03.jpg"><img
+                                src="images/hetiancommodity/2-03.jpg" alt=""></a>
+                        <a data-fancybox="gallery" href="images/hetiancommodity/2-04.jpg"><img
+                                src="images/hetiancommodity/2-04.jpg" alt=""></a>
+                        <a data-fancybox="gallery" href="images/hetiancommodity/2-05.jpg"><img
+                                src="images/hetiancommodity/2-05.jpg" alt=""></a>
+                    </div>
+                </div>
+
+                <div id="tab3" class="tabs-panel">
+                    <div class="transport">
+                        <p>
+                            出貨說明<br>
+                            訂單確認後，依選定付款方式完成貨款支付，才視為「訂單成立」。<br>
+                            訂單成立後：<br>
+                            現貨商品：2-3日內寄出 ( 不含運送時間 )。<br>
+                            訂製商品：依數量規格，約需 1-3 週不等 ( 不含運送時間 )。<br>
+                            預購商品：「出貨日期」開始依照預購訂單成立時間於一周內先後寄出 ( 不含運送時間 )。<br>
+                        </p><br>
+                        <p>
+                        <ul>付款方式
+                            <li>信用卡 ( 附加費用2.75% )</li>
+                            <li>ATM ( 附加費用NT$15 )</li>
+                            <li>超商代碼 ( 附加費用NT$26 )</li>
+                            <li>PayPal國際付款 ( 附加費用4.4% )</li>
+                            <li>webATM ( 附加費用1% )</li>
+                        </ul>
+                        </p><br>
+
+                        webATM轉帳為該筆訂單專屬虛擬帳戶，轉帳完成或逾期三日內未繳款，該帳號將自動失效。<br>
+                        轉帳前請確認轉帳金額是否正確，如金額錯誤將無法完成轉帳請重新輸入正確金額。<br>
+                        超商代碼繳費須前往超商使用超商機器 ( ibon、FamiPort ... ) 繳費。<br>
+                        因配合政府金管會電子支付管理條例規範及交易安全控管，未來使用第三方支付歐付寶金流都需登入會員才能付款，為完善您的購物體驗，使用信用卡分期付款請您先註冊成為歐付寶會員後再繼續信用卡分期交易。<br>
+                        </p><br>
+
+
+                        <p>
+                        <ul>配送範圍
+                            <li>台灣本島</li>
+                            <li>澎湖</li>
+                            <li>金門</li>
+                            <li>馬祖</li>
+                        </ul>
+                        </p><br>
+                        <p>
+                        <ul>​配送方式
+                            <li>郵局掛號 NT$65</li>
+                            <li>7-11取貨 NT$ 65</li>
+                            <li>全家超商取貨 NT$65</li>
+                        </ul>
+                        </p><br>
+                        <p>
+                        <ul>配送時間
+                            <li>出貨時間：週一至週五 ( 國定假日除外 )</li>
+                            <li>國內郵寄：寄出後約 2-3 日到貨</li>
+                            <li>國內外島郵寄：寄出後約 3-7 日到貨</li>
+                            <li>7-11、全家店到店：寄出後約 2-4 日到貨 ( 便利商店簡訊通知取貨，請於期限內完成取貨 )</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="info">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="images/hetiancommodity/Logo.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="contact">
+                            <ul>
+                                <li>統編：98931534</li>
+                                <li>地址：屏東市公正四街 95 號 8 樓之 2</li>
+                                <li>聯絡人：李先生</li>
+                                <li>服務電話：0932881464 </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="sign">
+                    <p class="design">&copy;2020　All Rights Reserved</p>
+                    <p> 禾田企業社　&　煙火之後 「 穆 」</p>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        <div id="link-active">
+
+            <!-- <a href="https://www.facebook.com/%E7%85%99%E7%81%AB%E4%B9%8B%E5%BE%8C-MusicDesign-110796323872405"><img src="images/hetiancommodity/icon/fb-link.png" alt=""></a> -->
+            <!-- <a href="https://shopee.tw/noisezhong1987"><img src="images/hetiancommodity/icon/shopee-link.png" alt=""></a> -->
+            <a href="https://line.me/ti/p/LX2BOiWZcO"><img src="images/hetiancommodity/icon/line-link.png" alt="Line"></a>
+            <a href="http://qr.topscan.com/api.php?text=https://u.wechat.com/IHC8s3wUhfc2GscTP0FSgSo"><img src="images/hetiancommodity/icon/wc-link.png" alt="微信"></a>
+        </div>
+    </div>
+    <script src="js/hetiancommodity.js"></script>
+
+</body>
+
+</html>

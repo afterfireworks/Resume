@@ -1,0 +1,459 @@
+/* CSS Document */
+body {
+    font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC', 'Noto Sans TC', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.877);
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    padding: 15px 40px;
+    height: 15vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    /* box-sizing: border-box; */
+    transition: top 0.4s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+/*  */
+header .logo {
+    font-size: 3rem;
+    color: whitesmoke;
+}
+
+.hideUp header {
+    top: -15vh;
+}
+
+/*  */
+
+.buttonmenu {
+    position: fixed;
+    right: 3vw;
+    bottom: 3vh;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    opacity: 1;
+}
+
+.disappear {
+    opacity: 0;
+}
+
+.floatbutton {
+    height: 3em;
+    width: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1em;
+    background: rgb(54, 166, 194);
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: 1rem;
+    padding-left: 15px;
+    cursor: pointer;
+    opacity: .8;
+    transition: all 1.5s;
+    -webkit-transition: all 1.5s;
+    -moz-transition: all 1.5s;
+    -ms-transition: all 1.5s;
+    -o-transition: all 1.5s;
+}
+
+.floatbutton:active {
+    transform: translateY(-1vh);
+    -webkit-transform: translateY(-1vh);
+    -moz-transform: translateY(-1vh);
+    -ms-transform: translateY(-1vh);
+    -o-transform: translateY(-1vh);
+    opacity: .1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-tap-highlight-color: transparent;
+    /* 手機執行 animation 時不產生不明閃爍 */
+}
+
+
+
+
+main {
+    width: 100vw;
+    padding-top: 15vh;
+    color: whitesmoke;
+    font-size: 24px;
+    overflow-x: hidden;
+}
+
+.banner {
+    width: 100vw;
+    height: 85vh;
+    /* Fallback for browsers that do not support Custom Properties */
+    /* height: calc(var(--vh, 1vh) * 90); */
+    background-image: url(../images/LilituCoffee/banner.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.banner-title {
+    color: whitesmoke;
+    font-size: 4rem;
+    font-weight: 700;
+    position: absolute;
+    left: 15%;
+    bottom: 2.5%;
+}
+
+.bannerbottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerbottom img {
+    max-width: 100%;
+}
+
+.line {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    width: 50vw;
+    margin: 5vh 0;
+}
+
+.line p {
+    width: 60%;
+    line-height: 2;
+}
+
+.leftcontainer {
+
+    border-right: whitesmoke 2px solid;
+}
+
+.rightcontainer {
+    position: relative;
+    margin-left: 50vw;
+    border-left: whitesmoke 2px solid;
+}
+
+.focus {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+
+}
+
+.focus p {
+    font-size: 2.5rem;
+}
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap .item {
+    max-width: 100vw;
+    height: 50vh;
+    background-color: black;
+
+}
+
+.item.img img {
+    max-width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.item.txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 5vw;
+}
+
+.item.txt h3 {
+    font-size: 3rem;
+
+}
+
+.item.txt span {
+    margin: 0.5vh 0;
+    font-size: 1rem;
+}
+
+.item.txt p {
+    width: 60vw;
+    padding: 1vh;
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.owl-carousel {
+    background-color: whitesmoke;
+}
+
+.owl-carousel .item {
+    height: 400px;
+    vertical-align: center;
+}
+
+.owl-carousel .item img {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.owl-item {
+    text-align: center;
+    padding: 8vh 0 3vh 0;
+}
+
+.sale {
+    padding: 15px 0;
+    color: black;
+    line-height: 1.5;
+}
+
+/* .owl-carousel .item:hover {
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+} */
+
+.owl-dots {
+    display: none;
+}
+
+
+footer {
+    width: 100vw;
+    height: 25vh;
+    /* bottom: 0;
+    position: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+footer .link {
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .info {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.info .word,
+.info .map {
+    width: 35vw;
+    height: 10vh;
+    padding: 0 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info .word {
+    align-items: flex-end;
+    border-right: whitesmoke 1px solid;
+}
+
+.info .map {
+    align-items: flex-start;
+    border-left: whitesmoke 1px solid;
+}
+
+footer .design {
+    font-size: 1rem;
+    margin-bottom: 1vh;
+}
+
+@media (min-width : 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    body .banner {
+        background-image: url(../images/LilituCoffee/banner-hd.jpg);
+    }
+
+    .buttonmenu {
+        right: 3vw;
+        bottom: 5vh;
+    }
+
+    .floatbutton {
+        height: 3em;
+        width: 3em;
+        font-size: 1rem;
+        line-height: 1.6rem;
+        letter-spacing: 1rem;
+    }
+
+    .floatbutton:hover,
+    .floatbutton:focus {
+        background: hsl(192, 60%, 28%);
+        transform: translateY(-1vh);
+        -webkit-transform: translateY(-1vh);
+        -moz-transform: translateY(-1vh);
+        -ms-transform: translateY(-1vh);
+        -o-transform: translateY(-1vh);
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+    }
+
+    .floatbutton:active {
+        transform: translateY(-1vh);
+        -webkit-transform: translateY(-1vh);
+        -moz-transform: translateY(-1vh);
+        -ms-transform: translateY(-1vh);
+        -o-transform: translateY(-1vh);
+        opacity: .1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    .wrap {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap.even {
+        flex-direction: row-reverse;
+    }
+
+    .wrap .item {
+        width: 50vw;
+        height: 100%;
+    }
+
+    .item.img img {
+        width: 50vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .item.txt {
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .item.txt h3 {
+        font-size: 2rem;
+        margin-bottom: 0vh;
+
+    }
+
+    .item.txt p {
+        width: 30vw;
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .line {
+        height: 30vh;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+
+    .owl-carousel .item {
+        height: 700px;
+        vertical-align: center;
+    }
+
+    /* .owl-carousel .item:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    } */
+
+    .owl-carousel .item img {
+        /* width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center; */
+    }
+
+    .owl-item {
+        height: 60vh;
+        padding: 8vh 0 3vh 0;
+    }
+
+    footer {
+        height: 50vh;
+        font-size: 1.5rem;
+    }
+
+    .info .word,
+    .info .map {
+        width: 35vw;
+        height: 25vh;
+        padding: 0 5vw;
+    }
+}
+
+@media (min-width : 1920px) {
+    footer .info {
+        width: 60vw;
+        justify-content: space-evenly;
+    }
+}

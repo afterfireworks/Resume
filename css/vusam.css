@@ -1,0 +1,1117 @@
+/* CSS Document */
+
+html {
+    font-family: 'Barlow Condensed', 'Noto Sans TC', "Taipei Sans TC Beta", sans-serif;
+    font-size: 20px;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    /* @supports (-webkit-appearance:none) {
+        .os-android & {
+          min-height: calc(100vh - 56px);
+        }
+      } */
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.section {
+    height: 100%;
+    width: 100%;
+    padding-top: 10%;
+    overflow: hidden;
+    display: flex;
+    background-color: rgba(235, 173, 81, 0.3);
+}
+
+.section.banner {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.header {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    z-index: 2;
+    padding: 1.5% 2%;
+    color: whitesmoke;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-menu {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-menu a {
+    text-decoration: none;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 1.0);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0.9);
+    font-weight: 700;
+}
+
+#index-menu a:hover {
+    color: rgb(248, 174, 62);
+    transform: translateY(-5px);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+}
+
+#title {
+    height: 200px;
+    width: 200px;
+    background-image: url(../images/vusam/logo.png);
+    background-size: contain;
+    position: fixed;
+    left: 5%;
+    top: 2%;
+    z-index: 3;
+}
+
+.tip {
+    visibility: hidden;
+    width: 120px;
+    position: absolute;
+    z-index: 3;
+    bottom: -30%;
+    left: 50%;
+    margin-left: -60px;
+    padding: 15px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+}
+
+.tip::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgb(49, 49, 49) transparent;
+}
+
+#title:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+#title:hover .tip {
+    visibility: visible;
+    opacity: 0.9;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+
+
+#footer {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 5%;
+    right: 2%;
+    bottom: 2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: whitesmoke;
+    animation: fadeInRight;
+    animation-duration: 1.5s;
+}
+
+#footer p {
+    margin-right: 1rem;
+}
+
+.sigh {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    /* display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center; */
+    border: whitesmoke 2px solid;
+}
+
+/* ********************************************************** */
+#index-gif {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: -5%;
+    top:-2%;
+    /* padding-bottom: 5vh; */
+}
+
+#index-gif image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/* vusam-index */
+#sectionindex {
+    background-image: url(../images/vusam/index-banner.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.pltitle {
+    color: whitesmoke;
+    font-size: 1.1rem;
+    padding: 1.5% 0%;
+    margin: 2% 0%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-start;
+}
+
+.index.even {
+    align-items: flex-end;
+}
+
+.section.page-pl {
+    flex-direction: column;
+    background-image: url(../images/vusam/index-background-top.png),
+        url(../images/vusam/index-background-right.png);
+    background-size: 100% 110%, 50% auto;
+    background-position: top center, bottom right;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.section.page-pl.even {
+    background-image: url(../images/vusam/index-background-top.png),
+        url(../images/vusam/index-background-left.png);
+    /* background-size: 100% 110%,50% 50%; */
+    background-position: top center, bottom left;
+    /* background-repeat: no-repeat,no-repeat; */
+}
+
+.indeximg {
+    height: 40%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indeximg img {
+    max-width: 500px;
+}
+
+.indextxt {
+    height: 50%;
+    width: 70%;
+    padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.9rem;
+}
+
+.indextxt h2 {
+    font-size: 1.1rem;
+    padding: 1.2vh 0;
+}
+
+.indextxt p {
+    padding: 1vh 0;
+    line-height: 1.2;
+}
+
+
+
+
+/* vusam-dairy */
+#dairy-banner {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/vusam/index-background.jpg);
+    background-size: 100% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section.dairy{
+    /* padding-left: 10vw;
+    padding-right: 10vw; */
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/vusam/story-top.png);
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#sectionlast {
+    background-image:
+        url(../images/vusam/story-top.png),
+        url(../images/vusam/story-bottom.png);
+    background-size: 100% 110%, 100% auto;
+    background-position: top center, bottom center;
+    background-repeat: no-repeat, no-repeat;
+    flex-direction: column;
+}
+
+.storyimage {
+    height: 90%;
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: #fff 5px solid; */
+}
+.storyimage img {
+    max-width: 500px;
+}
+
+.story {
+    height: 90%;
+    width: 45vw;
+    display: flex;
+    justify-content: center;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 5vw;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.story p {
+    color: black;
+    font-size: large;
+    line-height: 1.5rem;
+    letter-spacing: 2.5px;
+    padding: 0.5rem 0;
+}
+
+.story h2 {
+    font-size: 1.5rem;
+    padding-bottom: 0.1rem;
+}
+
+.movie,
+.moviestory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movie {
+    height:50%;
+    width: 100%;
+    justify-content: center;
+}
+
+.moviestory {
+    height: 50%;
+    width: 50%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 4vh;
+    padding-bottom: 5%;
+    margin: auto;
+}
+
+
+/* vusam-works */
+
+#workswall-banner {
+    background-image: url(../images/vusam/works-banner.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.workswall {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}
+
+.section.workswall {
+    background-image: url(../images/vusam/works-top.png);
+    background-size: 100% 110%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.works-title {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    z-index: 1;
+    background-image: url(../images/vusam/logo.png);
+    background-size: contain;
+    left: 5vw;
+    top: 10vh;
+}
+
+.workstable {
+    height: 690px;
+    width: 690px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-name {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works-name h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: black;
+}
+
+.worksitem img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.worksitem:hover img {
+    transform-origin: center center;
+    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    object-fit: contain;
+}
+
+
+
+
+
+/* contactus */
+.contactusindex {
+    height: 100vh;
+    width: 100vw;
+    padding: 18vh 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background-image: url(../images/vusam/contactus-banner.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.contactusmask {
+    position: absolute;
+    /* width: 100vw;
+	height: 100vh; */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.contactus {
+    height: 50vh;
+    width: 50vw;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+    left: 25vw;
+}
+
+#contactus-gif {
+    position: fixed;
+    z-index: 1;
+    height: 40vh;
+    width: 50vw;
+    left: 28vw;
+    bottom: 27vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#fb img,
+#line img {
+    height: 150px;
+    width: 150px;
+}
+
+#fb {
+    /*background-image: url(/images/vusam/facebook.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+    position: fixed;
+    z-index: 2;
+    left: 35%;
+    top: 22%;
+}
+
+#line {
+    /* background-image: url(/images/vusam/line.png);
+	background-size: cover;
+	background-repeat: no-repeat; */
+    position: fixed;
+    z-index: 2;
+    left: 60%;
+    top: 26%;
+}
+
+
+
+
+
+
+/* ................................................................................................................. */
+/*手機板*/
+@media (max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+
+    #index-menu {
+        width: 100vw;
+        margin-left: 0vw;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 3vh;
+    }
+
+    #index-menu a {
+        width: 40vw;
+    }
+
+    .solid {
+        width: 80vw;
+        border-bottom: rgb(255, 255, 255) 1px solid;
+        margin: 1vh 0;
+    }
+
+    #title {
+        width: 16vw;
+        height: 16vw;
+        background-image: url(../images/vusam/logo-white.png);
+        left: 50%;
+        margin-left: -8vw;
+    }
+
+    .sigh {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: whitesmoke 2px solid;
+        box-sizing: content-box;
+    }
+
+    /* vusam-index */
+    .index {
+        height: 100vh;
+        width: 100vw;
+        padding: 10vh 0vw 0vh 0vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    .index.even {
+        align-items: center;
+    }
+
+    .indeximg {
+        height: 34%;
+        width: 100%;
+    }
+
+    .indeximg img {
+        max-width: 250px;
+    }
+
+    .indextxt {
+        height: 51%;
+        ;
+        width: 100%;
+        ;
+        padding: 0vh 8vw;
+        font-size: 0.8rem;
+    }
+
+    .indextxt h2 {
+        font-size: 1rem;
+        padding: 0vh 0 2vh 0;
+    }
+
+    .indextxt p {
+        padding: 0vh 0;
+        line-height: 2.5vh;
+        padding: 0vh 0 1vh 0;
+    }
+
+
+    /* vusam-dairy */
+.section.dairy{
+    flex-direction: column;
+}
+.section.dairy.even{
+    flex-direction: column-reverse;
+}
+    .storyimage {
+        height:40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .storyimage img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .story {
+        height:50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mask {
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 80%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .story p {
+        color: black;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        letter-spacing: 1.5px;
+        padding: 0.5rem 0;
+    }
+
+    .story h2 {
+        font-size: 1.1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .movie {
+        height: 30vh;
+        margin-top: 10vh
+    }
+
+    iframe {
+        width: 80%;
+    }
+
+    .moviestory {
+        height: 60vh;
+        line-height: 3vh;
+        font-size: 0.9rem;
+        padding-bottom: 5vh;
+    }
+
+
+    /* vusam-works */
+    .workstable {
+        height: 300px;
+        width: 300px;
+    }
+
+
+    .works-name {
+        width: 100px;
+        height: 100px;
+    }
+
+    .worksitem img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .works-name h3 {
+        font-size: 1.5rem;
+    }
+
+    /* contactus */
+    .contactusindex {
+        background-size: contain;
+    }
+
+    .contactus {
+        width: 100vw;
+    }
+
+    #contactus-gif {
+        width: 80vw;
+        left: 10vw;
+        bottom: 10vh;
+    }
+
+    #fb img,
+    #line img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #fb {
+        left: 20%;
+        top: 40%;
+    }
+
+    #line {
+        left: 70%;
+        top: 45%;
+    }
+}
+
+/* @media (max-width:320px) {
+    html {
+        font-size: 12px;
+    }
+
+    #title {
+        height: 60px;
+        width: 60px;
+        background-image: url(../images/vusam/logo-white.png);
+        top: 0vh;
+        left: 50%;
+        margin-left: -30px;
+    }
+
+    .indeximg img {
+        max-width: 250px;
+    }
+
+    .storyimage img {
+        height: 150px;
+        width: 150px;
+    }
+
+    iframe {
+        max-width: 250px
+    }
+} */
+
+/* ................................................................................................................. */
+/*平板電腦*/
+@media (width:768px) {
+    html {
+        font-size: 20px;
+    }
+
+    #index-menu {
+        width: 100vw;
+        margin-left: 0vw;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 3vh;
+    }
+
+    #index-menu a {
+        width: 40vw;
+    }
+
+    .solid {
+        width: 80vw;
+        border-bottom: rgb(255, 255, 255) 1px solid;
+        margin: 1vh 0;
+    }
+
+    #title {
+        height: 120px;
+        width: 120px;
+        background-image: url(../images/vusam/logo-white.png);
+        top: 0.2vh;
+        left: 50%;
+        margin-left: -60px;
+    }
+
+    #gif {
+        background-size: contain;
+    }
+
+    #footer {
+        width: 90vw;
+        right: 2vw;
+    }
+
+    .index {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: center;
+    }
+
+    .index.even {
+        align-items: center;
+    }
+
+    .indeximg {
+        height: 50%;
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .indeximg img {
+        max-width: 500px;
+    }
+
+    .indextxt {
+        height: 40%;
+        width: 100%;
+        padding: 0vh 8vw;
+        font-size: 0.8rem;
+    }
+
+    .section.dairy{
+        flex-direction: column;
+    }
+    .section.dairy.even{
+        flex-direction: column-reverse;
+    }
+        .storyimage {
+            height:40%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .storyimage img {
+            height: 350px;
+            width: 350px;
+        }
+    
+        .story {
+            height:50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .mask {
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+    .story p {
+        color: black;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        letter-spacing: 1.5px;
+        padding: 0.5rem 0;
+    }
+
+    .story h2 {
+        font-size: 1.1rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .movie {
+        height: 40vh;
+        margin-top: 20vh
+    }
+
+    iframe {
+        width: 600px
+    }
+
+    .moviestory {
+        height: 50vh;
+        line-height: 3vh;
+        font-size: 0.9rem;
+        padding-bottom: 10vh;
+    }
+
+    .indeximg {
+        height: 30vh;
+        width: 100vw;
+    }
+
+    .indextxt {
+        height: 60vh;
+        width: 90vw;
+
+    }
+
+    .worksname {
+        height: 100%;
+        width: 40%;
+        font-size: 3rem;
+        justify-content: center;
+        /* padding-top: 10vh; */
+    }
+
+    /* vusam-works */
+    .workstable {
+        height: 600px;
+        width: 600px;
+    }
+
+
+    .works-name {
+        width: 100px;
+        height: 100px;
+    }
+
+    .worksname h3 {
+        padding: 15vh 6vw;
+    }
+
+    .worksitam img {
+        /* height: 250px; */
+        width: 200px;
+        height: 200px;
+    }
+
+    /* contactus */
+
+    .contactusindex {
+        background-size: contain;
+    }
+
+    .contactus {
+        width: 100vw;
+    }
+
+    #contactus-gif {
+        width: 80vw;
+        left: 10vw;
+        bottom: 10vh;
+    }
+
+    #fb {
+        left: 30vw;
+        top: 42vh;
+    }
+
+    #line {
+        background-repeat: no-repeat;
+        left: 65vw;
+        top: 46vh;
+    }
+
+    @media (min-width:1024px) and (max-width:1366px) {
+        html {
+            font-size: 20px;
+        }
+
+        #index-menu {
+            width: 100vw;
+            margin-left: 0vw;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 3vh;
+        }
+
+        #index-menu a {
+            width: 40vw;
+        }
+
+        .solid {
+            width: 80vw;
+            border-bottom: rgb(255, 255, 255) 1px solid;
+            margin: 1vh 0;
+        }
+
+        #title {
+            height: 120px;
+            width: 120px;
+            background-image: url(../images/vusam/logo-white.png);
+            top: 50vh;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        #gif {
+            background-size: contain;
+        }
+
+        #footer {
+            width: 90vw;
+            right: 2vw;
+        }
+
+
+        #section1,
+        #section3,
+        #section5 {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        #section2,
+        #section4,
+        #section6 {
+            flex-direction: column-reverse;
+        }
+
+        .storyimage {
+            height: 100vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8vh 3vw 0 9vw;
+        }
+
+        .storyimage img {
+            height: 400px;
+            width: 400px;
+        }
+
+        .story {
+            height: 100vh;
+            width: 50%;
+            padding: 8vh 0 0 0;
+        }
+
+        .story p {
+            color: black;
+            font-size: 1rem;
+            line-height: 1rem;
+            letter-spacing: 2px;
+            padding: 0.5rem 0;
+        }
+
+        .story h2 {
+            font-size: 1.2rem;
+            padding-bottom: 0.1rem;
+        }
+
+        .indeximg {
+            height: 30vh;
+            width: 100vw;
+        }
+
+
+
+        .indextxt {
+            height: 60vh;
+            width: 90vw;
+        }
+
+        .contactusindex {
+            background-size: contain;
+        }
+
+        #contactus-gif {
+            bottom: 15vh;
+        }
+
+        #fb {
+            left: 62vw;
+            top: 42vh;
+        }
+
+        #line {
+            background-repeat: no-repeat;
+            left: 75vw;
+            top: 45vh;
+        }
+    }
+
+    /* @media ( width:1366px ){} */
