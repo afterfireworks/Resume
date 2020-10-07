@@ -383,19 +383,19 @@ header .txt ul li {
 }
 
 
-/* works */
-.works {
+/* portfolios */
+.portfolios {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.works a {
+.portfolios a {
     text-decoration: none;
     color: black;
 }
 
-.works .item {
+.portfolios .item {
     width: 350px;
     height: 350px;
     position: relative;
@@ -459,7 +459,7 @@ header .txt ul li {
 }
 
 
-.works .item:hover .bg-img {
+.portfolios .item:hover .bg-img {
     transform: scale(1.2);
     transition: all 1s;
     -webkit-transform: scale(1.2);
@@ -472,7 +472,7 @@ header .txt ul li {
     -o-transition: all 1s;
 }
 
-.works .item:hover:hover .mask {
+.portfolios .item:hover:hover .mask {
     transform: scale(0.95) rotate(2deg) translateZ(0);
     /*縮小*/transition: all 1s;
     /*時間*/background-color: rgba(157, 188, 241, 0.22);
@@ -482,11 +482,11 @@ header .txt ul li {
     -o-transform: scale(0.95) rotate(2deg) translateZ(0);
 }
 
-.works .item:hover:hover .mask.second {
+.portfolios .item:hover:hover .mask.second {
     background-color: rgba(79, 173, 72, 0.2);
 }
 
-.works .item:hover .info {
+.portfolios .item:hover .info {
     transform: scale(1.15);
     -webkit-transform: scale(1.15);
     -moz-transform: scale(1.15);
