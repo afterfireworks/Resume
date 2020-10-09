@@ -63,7 +63,7 @@ header .logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 1em;
+    margin: 0 .2em;
     background: rgb(54, 166, 194);
     text-align: center;
     font-size: 1rem;
@@ -120,7 +120,7 @@ main {
     font-size: 3rem;
     font-weight: 700;
     position: absolute;
-    left: 15%;
+    left: 2.5%;
     bottom: 2.5%;
 }
 
@@ -321,3 +321,152 @@ footer .design {
     margin-bottom: 3vh;
 }
 
+@media (min-width : 1024px) {
+    html {
+        font-size: 16px;
+    }
+
+    body .banner {
+        background-image: url(../images/LilituCoffee/banner-hd.jpg);
+    }
+    .banner-title{
+        font-size: 4rem;
+        left: 15%;
+    }
+    .buttonmenu {
+        right: 3vw;
+        bottom: 5vh;
+    }
+
+    .floatbutton {
+        margin: 0 1em;
+    }
+
+    .floatbutton:hover,
+    .floatbutton:focus {
+        background: hsl(192, 60%, 28%);
+        transform: translateY(-1vh);
+        -webkit-transform: translateY(-1vh);
+        -moz-transform: translateY(-1vh);
+        -ms-transform: translateY(-1vh);
+        -o-transform: translateY(-1vh);
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+    }
+
+    .floatbutton:active {
+        transform: translateY(-1vh);
+        -webkit-transform: translateY(-1vh);
+        -moz-transform: translateY(-1vh);
+        -ms-transform: translateY(-1vh);
+        -o-transform: translateY(-1vh);
+        opacity: .1;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    }
+
+    .wrap {
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .wrap.even {
+        flex-direction: row-reverse;
+    }
+
+    .wrap .item {
+        width: 50vw;
+        height: 100%;
+    }
+
+    .item.img img {
+        width: 50vw;
+        height: 50vh;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .item.txt {
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .item.txt h3 {
+        font-size: 2rem;
+        margin-bottom: 0vh;
+
+    }
+
+    .item.txt p {
+        width: 30vw;
+        padding: 20px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .line {
+        height: 30vh;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
+    }
+
+    .owl-carousel .owl-item img {
+        width: 200px;
+        height:  200px;
+    }
+    .sale {
+        width: 200px;
+    }
+
+
+    footer {
+        font-size: 1.2rem;
+    }
+    footer .info .map iframe{
+        width: 350px;
+        height: 280px;
+    }
+}
+
+@media (min-width : 1920px) {
+    /* footer .info {
+        width: 60vw;
+        justify-content: space-evenly;
+    } */
+    .owl-carousel .owl-item img {
+        width: 300px;
+        height:  300px;
+        vertical-align: bottom;
+    }
+    .sale {
+        width: 300px;
+        font-size: 1.5rem;
+        /* margin-top: -30px; */
+    }
+
+    footer .info .map iframe{
+        width: 400px;
+        height: 320px;
+    }
+
+    footer .info{
+        font-size: 1.2rem;;
+    }
+    footer .design{
+        font-size: 1rem;
+    }
+
+    #live2dcanvas {
+        /* border: 0 !important;
+        left: -50px;
+        bottom: -40px; */
+    }
+    
+}
