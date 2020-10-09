@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Lilitu Coffee</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="js/OwlCarousel2-2.3.4/owl.carousel.min.css">
@@ -25,94 +25,94 @@
 
 <body touchstart>
 
-    
-<!-- loading -->
-<div id="loading">
-    <div class="lds-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+
+    <!-- loading -->
+    <div id="loading">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="loading-word">
+            <p>Loading</p>
+        </div>
     </div>
-    <div class="loading-word">
-        <p>Loading</p>
-    </div>
-</div>
-<style type="text/css">
-    #loading {
-        height: 100%;
-        width: 100%;
-        overflow-y: hidden;
-        position: fixed;
-        z-index: 100;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-image: url(images/loading-phone.png);
-        background-size: cover;
-        background-position: center bottom;
-        background-repeat: no-repeat;
-    }
-
-    .lds-ring {
-        display: inline-block;
-        position: relative;
-        width: 40px;
-        height: 40px;
-        margin: 5vh 0;
-    }
-
-    .lds-ring div {
-        box-sizing: border-box;
-        display: block;
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        margin: 4px;
-        border: 4px solid #000;
-        border-radius: 50%;
-        animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-        border-color: #000 transparent transparent transparent;
-    }
-
-    .lds-ring div:nth-child(1) {
-        animation-delay: -0.45s;
-    }
-
-    .lds-ring div:nth-child(2) {
-        animation-delay: -0.3s;
-    }
-
-    .lds-ring div:nth-child(3) {
-        animation-delay: -0.15s;
-    }
-
-    @keyframes lds-ring {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    @media (min-width : 1024px) {
+    <style type="text/css">
         #loading {
-            background-image: url(images/loading-web.png);
-            background-size:contain;
-            background-position: left center;
+            height: 100%;
+            width: 100%;
+            overflow-y: hidden;
+            position: fixed;
+            z-index: 100;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/loading-phone.png);
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
         }
-    }
-</style>
-<script>
-    window.onload = function () {
-        $("#loading").hide();
-    };
-</script>
-<!-- loading -->
+
+        .lds-ring {
+            display: inline-block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            margin: 5vh 0;
+        }
+
+        .lds-ring div {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            margin: 4px;
+            border: 4px solid #000;
+            border-radius: 50%;
+            animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: #000 transparent transparent transparent;
+        }
+
+        .lds-ring div:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        .lds-ring div:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        .lds-ring div:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+
+        @keyframes lds-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (min-width : 1024px) {
+            #loading {
+                background-image: url(images/loading-web.png);
+                background-size: contain;
+                background-position: left center;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            $("#loading").hide();
+        };
+    </script>
+    <!-- loading -->
 
 
     <header>
@@ -124,7 +124,7 @@
             <div class="banner-title">
                 <p style="opacity: .8;" data-aos="fade-down-right" data-aos-offset="50" data-aos-duration="1000">We're
                     Not</p>
-                <p style="margin-left: 3rem;" data-aos="fade-up-right" data-aos-offset="50" data-aos-duration="3000">We
+                <p style="margin-left: 2rem;" data-aos="fade-up-right" data-aos-offset="50" data-aos-duration="3000">We
                     Say We Are</p>
             </div>
         </div>
@@ -200,96 +200,85 @@
             <p>精選 x 咖啡豆</p>
         </div>
 
-        <div class="owl-carousel nonloop" data-aos="zoom-in">
-            <div class="item"><img src="images/LilituCoffee/beans1.png" alt="">
-                <div class="sale">
-                    <div class="name">摩卡</div>
-                    <div class="price">＄220 ( 5oz )</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/beans2.png" alt="">
-                <div class="sale">
-                    <div class="name">阿拉比卡</div>
-                    <div class="price">＄240 ( 5oz )</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/beans3.png" alt="">
-                <div class="sale">
-                    <div class="name">肯亞</div>
-                    <div class="price">＄250 ( 5oz )</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/beans4.png" alt="">
-                <div class="sale">
-                    <div class="name">藍山</div>
-                    <div class="price">＄220 ( 5oz )</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/beans5.png" alt="">
-                <div class="sale">
-                    <div class="name">曼特寧</div>
-                    <div class="price">＄220 ( 5oz )</div>
+        <div class="owl-carousel owl-loaded nonloop" data-aos="zoom-in">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item"><img src="images/LilituCoffee/beans1.png" alt="">
+                        <div class="sale">
+                            <div class="name">摩卡</div>
+                            <div class="price">＄220 ( 5磅裝 )</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/beans2.png" alt="">
+                        <div class="sale">
+                            <div class="name">阿拉比卡</div>
+                            <div class="price">＄240 ( 5磅裝 )</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/beans3.png" alt="">
+                        <div class="sale">
+                            <div class="name">肯亞</div>
+                            <div class="price">＄250 ( 5磅裝 )</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/beans4.png" alt="">
+                        <div class="sale">
+                            <div class="name">藍山</div>
+                            <div class="price">＄220 ( 5磅裝 )</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/beans5.png" alt="">
+                        <div class="sale">
+                            <div class="name">曼特寧</div>
+                            <div class="price">＄220 ( 5磅裝 )</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="owl-carousel owl-theme owl-loaded ">
-            <div class="owl-stage-outer">
-                <div class="owl-stage">
-                    <div class="owl-item">商品1</div>
-                    <div class="owl-item">商品2</div>
-                    <div class="owl-item">商品3</div>
-                    <div class="owl-item">商品4</div>
-                    <div class="owl-item">商品5</div>
-                </div>
-            </div>
-            <div class="owl-nav">
-                <div class="owl-prev">prev</div>
-                <div class="owl-next">next</div>
-            </div>
-            <div class="owl-dots">
-                <div class="owl-dot active"><span></span></div>
-                <div class="owl-dot"><span></span></div>
-                <div class="owl-dot"><span></span></div>
-            </div>
-        </div> -->
 
         <div class="focus">
             <p>當日 x 無菜單</p>
         </div>
 
-        <div class="owl-carousel nonloop" data-aos="zoom-in">
-            <div class="item"><img src="images/LilituCoffee/cookie1.png" alt="">
-                <div class="sale">
-                    <div class="name">當日隨機</div>
-                    <div class="price">限量提供</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/cookie2.png" alt="">
-                <div class="sale">
-                    <div class="name">當日隨機</div>
-                    <div class="price">限量提供</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/cookie3.png" alt="">
-                <div class="sale">
-                    <div class="name">當日隨機</div>
-                    <div class="price">限量提供</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/cookie4.png" alt="">
-                <div class="sale">
-                    <div class="name">當日隨機</div>
-                    <div class="price">限量提供</div>
-                </div>
-            </div>
-            <div class="item"><img src="images/LilituCoffee/cookie5.png" alt="">
-                <div class="sale">
-                    <div class="name">當日隨機</div>
-                    <div class="price">限量提供</div>
+        <div class="owl-carousel owl-loaded nonloop" data-aos="zoom-in">
+            <div class="owl-stage-outer">
+                <div class="owl-stage">
+                    <div class="owl-item"><img src="images/LilituCoffee/cookie1.png" alt="">
+                        <div class="sale">
+                            <div class="name">當日隨機</div>
+                            <div class="price">限量提供</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/cookie2.png" alt="">
+                        <div class="sale">
+                            <div class="name">當日隨機</div>
+                            <div class="price">限量提供</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/cookie3.png" alt="">
+                        <div class="sale">
+                            <div class="name">當日隨機</div>
+                            <div class="price">限量提供</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/cookie4.png" alt="">
+                        <div class="sale">
+                            <div class="name">當日隨機</div>
+                            <div class="price">限量提供</div>
+                        </div>
+                    </div>
+                    <div class="owl-item"><img src="images/LilituCoffee/cookie5.png" alt="">
+                        <div class="sale">
+                            <div class="name">當日隨機</div>
+                            <div class="price">限量提供</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
         <div class="line leftcontainer">
             <p data-aos="zoom-out" data-aos-offset="50" data-aos-duration="2500"></p>
         </div>
@@ -314,7 +303,7 @@
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6191.179364519895!2d120.48576111998743!3d22.67997489572281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1799571821b7%3A0x81dba3c7cd11bc99!2zSS9vIHN0dWRpb-Wxj-adsee4o-mdkuWJteiBmuiQvQ!5e0!3m2!1szh-TW!2stw!4v1591519824534!5m2!1szh-TW!2stw"
-                    width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    width="150" height="120" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
             </div>
         </div>
@@ -368,9 +357,9 @@
         });
         $('.nonloop').owlCarousel({
             center: true,
-            items: 5,
+            items: 3,
             loop: false,
-            margin: 10,
+            margin: 80,
             responsive: {
                 600: {
                     items: 3
@@ -390,31 +379,32 @@
             owl.trigger('prev.owl.carousel', [300]);
         })
     </script>
-    <script src="js/L2Dwidget.0.min.js"></script>
+    <!-- <script src="js/L2Dwidget.0.min.js"></script> -->
     <script src="js/L2Dwidget.min.js"></script>
     <script type="text/javascript">
-      L2Dwidget.init({
-        model: {
-          jsonPath: 'images/LilituCoffee/Blackcat Tororo/tororo.model.json',
-        },
-        display: {
-          superSample: 1,
-          width: 200,
-          height: 200,
-          position: 'left',
-          hOffset: 10,
-          vOffset: 10,
-        },
-        mobile: {
-          show: true,
-          scale: 1,
-          motion: true,
-        },
-        react: {
-          opacityDefault: 1,
-          opacityOnHover: 0.5,
-        }
-      })
+        L2Dwidget.init({
+            model: {
+                jsonPath: 'images/LilituCoffee/Blackcat Tororo/tororo.model.json',
+            },
+            display: {
+                superSample: 1,
+                width: 200,
+                height: 200,
+                position: 'left',
+                hOffset: -50,
+                vOffset: -50,
+            },
+            mobile: {
+                show: true,
+                scale: 0.5,
+                motion: true,
+
+            },
+            react: {
+                opacityDefault: 1,
+                opacityOnHover: 0.5,
+            }
+        })
     </script>
 
 </body>

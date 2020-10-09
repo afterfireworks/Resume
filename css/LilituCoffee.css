@@ -1,4 +1,7 @@
 /* CSS Document */
+html{
+    font-size: 12px;
+}
 body {
     font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans SC', 'Noto Sans TC', sans-serif;
     width: 100vw;
@@ -29,7 +32,7 @@ header {
 
 /*  */
 header .logo {
-    font-size: 3rem;
+    font-size: 2rem;
     color: whitesmoke;
 }
 
@@ -63,8 +66,8 @@ header .logo {
     margin: 0 1em;
     background: rgb(54, 166, 194);
     text-align: center;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     letter-spacing: 1rem;
     padding-left: 15px;
     cursor: pointer;
@@ -99,7 +102,6 @@ main {
     width: 100vw;
     padding-top: 15vh;
     color: whitesmoke;
-    /* font-size: 24px; */
     overflow-x: hidden;
 }
 
@@ -115,7 +117,7 @@ main {
 
 .banner-title {
     color: whitesmoke;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
     position: absolute;
     left: 15%;
@@ -145,6 +147,7 @@ main {
 .line p {
     width: 60%;
     line-height: 2;
+    font-size: 1.1rem;
 }
 
 .leftcontainer {
@@ -201,7 +204,7 @@ main {
 }
 
 .item.txt h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 
 }
 
@@ -213,7 +216,7 @@ main {
 .item.txt p {
     width: 60vw;
     padding: 1vh;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 
@@ -221,28 +224,26 @@ main {
     background-color: whitesmoke;
 }
 
-.owl-carousel .item {
-    height: 400px;
+.owl-carousel .owl-item {
+    /* width: 200px;
+    height: 200px; */
     vertical-align: center;
+    padding: 3vh 0 3vh 0; 
+    margin-top: -10px;
 }
 
-.owl-carousel .item img {
-    margin: auto;
-    width: 300px;
-    height: 300px;
+.owl-carousel .owl-item img {
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     object-position: center center;
 }
-
-.owl-item {
-    text-align: center;
-    padding: 8vh 0 3vh 0;
-}
-
 .sale {
-    padding: 15px 0;
+    /* padding: 15px; */
+    width: 120px;
     color: black;
-    line-height: 1.5;
+    text-align: center;
+    line-height: 1.2;
 }
 
 /* .owl-carousel .item:hover {
@@ -265,7 +266,6 @@ main {
 
 footer {
     width: 100vw;
-    height: 25vh;
     /* bottom: 0;
     position: fixed; */
     display: flex;
@@ -273,32 +273,37 @@ footer {
     justify-content: space-between;
     align-items: center;
     color: whitesmoke;
-    font-size: 2rem;
 }
 
 footer .link {
-    width: 60vw;
+    width: 80vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+footer .link img{
+    width: 80%;
+    vertical-align: middle;
 }
 
 footer .info {
-    width: 70vw;
+    width: 100vw;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 5vh 0;
     align-items: center;
-    font-size: 1.2rem;
-    line-height: 2;
+    font-size: .8rem;
+    line-height: 1.5;
 }
 
 .info .word,
 .info .map {
-    width: 35vw;
-    height: 10vh;
-    padding: 0 5vw;
+    width: 50%;
+    height: 20vh;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 0 5%;
 }
 
 .info .word {
@@ -312,148 +317,7 @@ footer .info {
 }
 
 footer .design {
-    font-size: 1rem;
-    margin-bottom: 1vh;
+    font-size: .6rem;
+    margin-bottom: 3vh;
 }
 
-@media (min-width : 1024px) {
-    html {
-        font-size: 16px;
-    }
-
-    body .banner {
-        background-image: url(../images/LilituCoffee/banner-hd.jpg);
-    }
-
-    .buttonmenu {
-        right: 3vw;
-        bottom: 5vh;
-    }
-
-    .floatbutton {
-        height: 3em;
-        width: 3em;
-        font-size: 1rem;
-        line-height: 1.6rem;
-        letter-spacing: 1rem;
-    }
-
-    .floatbutton:hover,
-    .floatbutton:focus {
-        background: hsl(192, 60%, 28%);
-        transform: translateY(-1vh);
-        -webkit-transform: translateY(-1vh);
-        -moz-transform: translateY(-1vh);
-        -ms-transform: translateY(-1vh);
-        -o-transform: translateY(-1vh);
-        transition: all .5s;
-        -webkit-transition: all .5s;
-        -moz-transition: all .5s;
-        -ms-transition: all .5s;
-        -o-transition: all .5s;
-    }
-
-    .floatbutton:active {
-        transform: translateY(-1vh);
-        -webkit-transform: translateY(-1vh);
-        -moz-transform: translateY(-1vh);
-        -ms-transform: translateY(-1vh);
-        -o-transform: translateY(-1vh);
-        opacity: .1;
-        transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -ms-transition: all 0.5s;
-        -o-transition: all 0.5s;
-    }
-
-    .wrap {
-        width: 100vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .wrap.even {
-        flex-direction: row-reverse;
-    }
-
-    .wrap .item {
-        width: 50vw;
-        height: 100%;
-    }
-
-    .item.img img {
-        width: 50vw;
-        height: 50vh;
-        object-fit: cover;
-        object-position: center center;
-    }
-
-    .item.txt {
-        background-color: rgba(0, 0, 0, 0.35);
-    }
-
-    .item.txt h3 {
-        font-size: 2rem;
-        margin-bottom: 0vh;
-
-    }
-
-    .item.txt p {
-        width: 30vw;
-        padding: 20px;
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    .line {
-        height: 30vh;
-        margin-top: 20vh;
-        margin-bottom: 20vh;
-    }
-
-    .owl-carousel .item {
-        height: 700px;
-        vertical-align: center;
-    }
-
-    /* .owl-carousel .item:hover {
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-    } */
-
-    .owl-carousel .item img {
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center; */
-    }
-
-    .owl-item {
-        height: 60vh;
-        padding: 8vh 0 3vh 0;
-    }
-
-    footer {
-        height: 50vh;
-        font-size: 1.5rem;
-    }
-
-    .info .word,
-    .info .map {
-        width: 35vw;
-        height: 25vh;
-        padding: 0 5vw;
-    }
-}
-
-@media (min-width : 1920px) {
-    footer .info {
-        width: 60vw;
-        justify-content: space-evenly;
-    }
-}
