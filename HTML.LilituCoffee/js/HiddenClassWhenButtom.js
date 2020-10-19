@@ -5,7 +5,7 @@
 $(window).scroll(function(){
     last=$("body").height()-$(window).height()-500
     if($(window).scrollTop()>=last){
-    $(".buttonmenu").fadeOut(0);
+    $(".buttonmenu").fadeOut(300);
     } else {
         $(".buttonmenu").fadeIn(300);
     }

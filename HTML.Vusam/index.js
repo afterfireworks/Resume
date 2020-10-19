@@ -121,10 +121,10 @@ $(document).ready(function () {
 		slidesToKeep: 0,
 		delay: 2000,
 		slides: [
-			{ src: "images/vusam/index-gif-1.png", transition: 'fade' },
-			{ src: "images/vusam/index-gif-2.png", transition: 'fade' },
-			{ src: "images/vusam/index-gif-3.png", transition: 'fade' },
-			{ src: "images/vusam/index-gif-4.png", transition: 'fade' },
+			{ src: "img/index-gif-1.png", transition: 'fade' },
+			{ src: "img/index-gif-2.png", transition: 'fade' },
+			{ src: "img/index-gif-3.png", transition: 'fade' },
+			{ src: "img/index-gif-4.png", transition: 'fade' },
 		],
 		// transition: [ 'fade', 'fade' ]
 	});
@@ -134,8 +134,8 @@ $(document).ready(function () {
 		slidesToKeep: 0,
 		delay: 2000,
 		slides: [
-			{ src: "images/vusam/contactus-gif-1.png", transition: 'fade' },
-			{ src: "images/vusam/contactus-gif-2.png", transition: 'fade' },
+			{ src: "img/contactus-gif-1.png", transition: 'fade' },
+			{ src: "img/contactus-gif-2.png", transition: 'fade' },
 		],
 		// transition: [ 'fade', 'fade' ]
 	})

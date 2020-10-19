@@ -110,7 +110,7 @@ main {
     height: 85vh;
     /* Fallback for browsers that do not support Custom Properties */
     /* height: calc(var(--vh, 1vh) * 90); */
-    background-image: url(../images/LilituCoffee/banner.jpg);
+    background-image: url(img/banner.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -327,7 +327,7 @@ footer .design {
     }
 
     body .banner {
-        background-image: url(../images/LilituCoffee/banner-hd.jpg);
+        background-image: url(img/banner-hd.jpg);
     }
     .banner-title{
         font-size: 4rem;
