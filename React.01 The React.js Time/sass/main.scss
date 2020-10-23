@@ -1,0 +1,151 @@
+@mixin d-fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include d-fcc;
+    overflow-x: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(70, 133, 206);
+
+    #sayhello {
+        width: 100vw;
+        @include d-fcc;
+        letter-spacing: 2;
+        font-size: 2.5rem;
+        color: #fff;
+
+        p {
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+
+    #calendartick {
+        width: 25vw;
+        height: 50vh;
+        @include d-fcc;
+        flex-direction: column;
+
+        &::before {
+            content: "";
+            width: 200px;
+            height: 20px;
+            margin-top: 20px;
+            background-color: rgb(53, 89, 153);
+            box-shadow: 7px 7px 0px rgb(78, 77, 77);
+        }
+
+        ;
+
+        #calendar {
+            width: 200px;
+            height: 300px;
+            background-color: rgb(240, 124, 101);
+            @include d-fcc;
+            flex-direction: column;
+            box-shadow: 7px 7px 0px rgb(78, 77, 77);
+
+            #day {
+                width: 150px;
+                height: 150px;
+                @include d-fcc;
+                flex-direction: column;
+                font-size: 5rem;
+                background-color: rgb(255, 235, 205);
+            }
+
+            ;
+
+            #year-mouth {
+                color: rgb(77, 76, 76);
+                padding: 1rem;
+                font-size: 1.5rem;
+                font-weight: 900;
+            }
+
+            ;
+
+            #time-now {
+                background-color: rgb(255, 235, 205);
+                padding: 10px 30px;
+                color: rgb(77, 76, 76);
+                font-size: 1rem;
+                font-weight: 900;
+            }
+        }
+    }
+
+    #balloon {
+        width: 300px;
+        height: 350px;
+        @include d-fcc;
+        flex-direction: column;
+        // margin-top: 80px;
+        padding: 12px;
+        border-radius: 50%;
+        transform: rotate(20deg);
+        cursor: pointer;
+
+        h3 {
+            padding-top: 20%;
+            font-size: 24px;
+            color: #fff;
+            transform: rotate(-40deg);
+        }
+
+        input {
+            transform: rotate(-40deg);
+            margin-left:80px ;
+        }
+    }
+
+    #pomodorotimerclock {
+        width: 25vw;
+        height: 50vh;
+        @include d-fcc;
+        flex-direction: column;
+        font-weight: 700;
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        #pomodorotimer {
+            margin-top: 3vh;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, .2);
+            text-align: center;
+            font-size: 1.2rem;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #card {
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5vh auto;
+    }
+}
