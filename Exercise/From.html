@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            width: 60vw;
+            margin: 5vh auto;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+
+        body p {
+            width: 50vw;
+            margin: 15px auto;
+            text-align: center;
+        }
+
+        body select {
+            width: 10vw;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="表單資料處理目的地網址" method="傳送方式">
+        <!-- 傳送方式:
+        GET:資料放置在網址之後,以?進行分隔,多欄位以&T串接
+        POST:資料放置在HTTP的表頭中 -->
+        <fieldset>
+            <legend>登入資訊</legend>
+            <p>
+                <label for="username">帳號 : <input type="text" name="username" size="30" maxlength="30" id="username"
+                        autofocus required autocomplete="on" placeholder="admin" pattern="[a-zA-Z0-9]*"></label>
+            </p>
+            <p>
+                <label for="password">密碼 : <input type="password" name="password" size="30" maxlength="30" id="password"
+                        required autocomplete="on" placeholder="******" pattern="[a-zA-Z0-9]*"></label>
+            </p>
+            <!-- label:可將整個框視為認定範圍,綁定#id -->
+            <p class="formoption" style="margin-left: 4rem;">
+                <input type="submit" value="送出">
+                <input type="reset" value="重置">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>選擇框</legend>
+            <p>
+                <input type="radio" name="單選紐" value="選項一"> A
+                <input type="radio" name="單選紐" value="選項二"> B
+                <input type="radio" name="單選紐" value="選項三"> C
+                <input type="radio" name="單選紐" value="選項四"> D
+            </p>
+            <p>
+                <input type="checkbox" name="多選方塊" value="多選1"> I
+                <input type="checkbox" name="多選方塊" value="多選2"> II
+                <input type="checkbox" name="多選方塊" value="多選3"> III
+                <input type="checkbox" name="多選方塊" value="多選4"> IV
+                <input type="checkbox" name="多選方塊" value="多選5"> V
+            </p>
+            <!-- name 屬性相同視為一組 -->
+        </fieldset>
+        <fieldset>
+            <legend>下拉選項</legend>
+            <p>
+                <select name="季節" id="season">
+                    <option value="spring" selected>春</option> //selected 預設選項
+                    <option value="summer">夏</option>
+                    <option value="autumn">秋</option>
+                    <option value="winter">冬</option>
+                </select>
+            </p>
+            <p>
+                <select name="月份" id="month" multiple size="3"> //multiple 可複選(按住ctrl) , size 一次顯示選項數
+                    <option value="1"> 一月</option>
+                    <option value="2"> 二月</option>
+                    <option value="3"> 三月</option>
+                    <option value="4"> 四月</option>
+                    <option value="5"> 五月</option>
+                    <option value="6"> 六月</option>
+                    <option value="7"> 七月</option>
+                    <option value="8"> 八月</option>
+                    <option value="9"> 九月</option>
+                    <option value="10">十月</option>
+                    <option value="11">十一月</option>
+                    <option value="12">十二月</option>
+                </select><br>
+                <span style="font-size: .8rem;">按住 <kbd>Ctrl</kbd> 可複選</span>
+            </p>
+
+        </fieldset>
+        <fieldset>
+            <legend>文字區域</legend>
+            <p>
+                <textarea name="文字區域" id="textarea" cols="100" rows="10" wrap="on" placeholder="請在此輸入"></textarea>
+            </p>
+            <!-- cols 寬度 ,rows 長度 ,wrap 換行<off不換行>-->
+            <p class="formoption">
+                <input type="submit" value="送出">
+                <input type="reset" value="重置">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>HTML5 新增表單</legend>
+            <p>搜尋：<input type="search"></p>
+            <p>Email：<input type="email" placeholder="exmple@email.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></p>
+            <p>手機：<input type="tel" placeholder="09xxxxxxxx" maxlength="10" pattern="[0-9]{10}"></p>
+            <p>URL：<input type="url"></p>
+            <p>數字：<input type="number" min="1" max="120" step="1"></p>
+            <p>程度：<input type="range"></p>
+            <p>顏色：<input type="color"><input type="color"><input type="color"></p>
+            <p>
+                日期：<input type="date">
+                時間：<input type="time">
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>

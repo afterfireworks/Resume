@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+
+    <link rel="icon" href="" type="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+    <title>Welcom</title>
+</head>
+
+
+<body>
+    <div id="index-link">
+        <a href="tel:0936790826" class="line animate__animated animate__fadeInDown"><img src="icon-cellphone.png" alt="通話"></a>
+        <a href="https://line.me/ti/p/ww_vRpcBfL" class="line animate__animated animate__fadeIn"><img src="icon-line.png" alt="Line"></a>
+        <a href="http://www.afterfireworks.epizy.com/" class="web animate__animated animate__fadeInUp"><img src="icon-web.png" alt="首頁"></a>
+    </div>
+    <style type="text/css">
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #index-link {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.87);
+            padding: 10vh 0;
+        }
+        #index-link a{
+            --animate-duration: 2s;
+        }
+        #index-link img {
+            width: 100px;
+            height: auto;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        .line {
+            margin: 0 0;
+        }
+
+   
+
+        @media (min-width: 768px) {
+            #index-link {
+                flex-direction: row;
+            }
+        }
+    </style>
+</body>
+
+</html>
