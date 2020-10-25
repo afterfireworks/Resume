@@ -11,7 +11,6 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid rgb(44, 58, 73);
     margin: auto;
 }
 
@@ -87,7 +86,7 @@ header .txt ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-top: 1px solid rgb(44, 58, 73);
     border-bottom: 1px solid rgb(44, 58, 73);
 }
 
@@ -101,7 +100,6 @@ header .txt ul li {
     display: flex;
     margin: auto;
     padding: 7vh 0;
-    border-bottom: 1px solid rgb(44, 58, 73);
 }
 
 
@@ -432,9 +430,9 @@ header .txt ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20% 15%;
-    color: whitesmoke;
-    text-shadow: 0px 1px 1px rgba(0, 0, 0,1);
+    padding: 25% 10%;
+    color: rgb(250, 250, 250);
+    text-shadow: 0px 2px 2px black;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
@@ -447,6 +445,7 @@ header .txt ul li {
     text-align: center;
     margin-bottom: 1vh;
     border-bottom: 2px solid whitesmoke;
+    box-shadow: 0 4px 2px -2px black; ;
 }
 
 .info ul {
@@ -499,18 +498,16 @@ header .txt ul li {
     -o-transition: scale .7s;
     transition-timing-function: ease-in;
     -webkit-backface-visibility: hidden;
-    /* -moz-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
     -ms-perspective: 1000;
-    perspective: 1000; */
+    perspective: 1000;
 }
 
-.bootstrap {
-    border-bottom: none;
-    padding-bottom: 5vh;
+.bootstrap .react {
 }
 
 footer {
@@ -520,7 +517,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    border-top: 1px solid rgb(44, 58, 73);
 
 
 }
