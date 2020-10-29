@@ -312,27 +312,25 @@
 
         ];
 
-        events.some((item, idx) => {
+        events.forEach((item, idx) => {
 
             $(item.id).mousemove(function (event) {
-                $(item.id).fadeOut(500);
+                $(item.id).stop(true).fadeOut(300);
                 setTimeout(function () {
                     $(item.id).text(item.after)
-                }, 500);
-                $(item.id).fadeIn(1000);
-                return true;
+                }, 400);
+                $(item.id).fadeIn(600);
             });
         });
 
         events.some((item, idx) => {
 
             $(item.id).mouseleave(function (event) {
-                $(item.id).fadeOut(500);
+                $(item.id).stop(true).fadeOut(300);
                 setTimeout(function () {
                     $(item.id).text(item.before)
-                }, 500);
-                $(item.id).fadeIn(1000);
-                return true;
+                }, 400);
+                $(item.id).fadeIn(600);
             });
         });
 
