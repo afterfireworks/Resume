@@ -16,14 +16,14 @@ a {
 
 header {
     background-color: rgb(0, 0, 0);
+    text-shadow: 0px 3px 3px black;
+    font-weight: 900;
     padding: 15px 40px;
     height: 15vh;
     position: fixed;
     top: 0;
     width: 100vw;
-    /* box-sizing: border-box; */
-    transition: top 0.4s ease-in-out;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    transition: background-color .8s ease-in-out;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -36,8 +36,9 @@ header .logo {
     color: whitesmoke;
 }
 
-.hideUp header {
-    top: -15vh;
+.hide header {
+    /* top: -15vh; */
+    background-color: rgb(0, 0, 0, 0);
 }
 
 /*  */
