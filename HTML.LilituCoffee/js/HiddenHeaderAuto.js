@@ -3,7 +3,7 @@
 
 // HiddenHeaderAuto
 var bodyClass = document.body.classList,
-    lastScrollY = 0;
+    lastScrollY = 500;
 window.addEventListener('scroll', function () {
     var st = this.scrollY;
     /* 判斷是向上捲動，而且捲軸超過 200px */

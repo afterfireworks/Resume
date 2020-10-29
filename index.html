@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Resume</title>
     <link rel="stylesheet" href="public.css/reset.css">
     <link rel="stylesheet" href="Resume.css">
@@ -98,11 +98,6 @@
             }
         }
     </style>
-    <script>
-        window.onload = function () {
-            $("#loading").hide();
-        };
-    </script>
     <!-- loading -->
 
 
@@ -243,8 +238,8 @@
         </div>
     </div>
 
-        <!-- Portfolios x Bootstrap -->
-        <!-- <div class="title">
+    <!-- Portfolios x Bootstrap -->
+    <!-- <div class="title">
             <p id="bootstrap">Portfolios x Bootstrap</p>
         </div>
         <div class="container portfolios bootstrap">
@@ -274,60 +269,79 @@
             </div>
         </div>  -->
 
-        <!-- Task x React -->
-        <div class="title">
-            <p id="react">Task x React</p>
+    <!-- Task x React -->
+    <div class="title">
+        <p id="react">Task x React</p>
+    </div>
+    <div class="container portfolios react">
+        <div class="item">
+            <a href="React.01 The React.js Time/React.01.html" target="_blank">
+                <div class="bg-img" style="background-image: url(public.img/Resume/React.01.jpg);"></div>
+                <div class="mask second"></div>
+                <div class="info">
+                    <h3>The React.js Time</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>Sass</li>
+                    </ul>
+                </div>
+            </a>
         </div>
-        <div class="container portfolios react">
-            <div class="item">
-                <a href="React.01 The React.js Time/React.01.html" target="_blank">
-                    <div class="bg-img" style="background-image: url(public.img/Resume/React.01.jpg);"></div>
-                    <div class="mask second"></div>
-                    <div class="info">
-                        <h3>The React.js Time</h3>
-                        <ul>
-                            <li>React</li>
-                            <li>Sass</li>
-                        </ul>
-                    </div>
-                </a>
-            </div>
-          
-        </div> 
+
+    </div>
 
 
-        <!-- footer -->
-        <footer>
-            <p class="design">&copy;2020　All Rights Reserved ｜ <span>「 穆 」</span></p>
-        </footer>
+    <!-- footer -->
+    <footer>
+        <p class="design">&copy;2020　All Rights Reserved ｜ <span>「 穆 」</span></p>
+    </footer>
 
-        <script>
+    <script>
 
-            $(document).ready(function () {
+        $(document).ready(function () {
 
-                const events = [
-                    { id: '#skill', before: 'Skill', after: '技能' },
-                    { id: '#css', before: 'Portfolios x CSS', after: '作品集 x CSS' },
-                    { id: '#bootstrap', before: 'Portfolios x Bootstrap', after: '作品集 x Bootstrap' },
-                    { id: '#react', before: 'Task x React', after: '課題 x React' }
-                    
-                ];
+            $("#loading").hide();
+            // document.getElementById('#loading').style.display = "none";
+        });
 
-                events.forEach((item, idx) => {
-                    $(item.id).mousemove(function (event) {
-                        $(item.id).text(item.after).stop();
-                    });
-                    $(item.id).mouseleave(function (event) {
-                        $(item.id).text(item.before).stop();
-                    });
-                });
+        const events = [
+            { id: '#skill', before: 'Skill', after: '技能' },
+            { id: '#css', before: 'Portfolios x CSS', after: '作品集 x CSS' },
+            { id: '#bootstrap', before: 'Portfolios x Bootstrap', after: '作品集 x Bootstrap' },
+            { id: '#react', before: 'Task x React', after: '課題 x React' }
+
+        ];
+
+        events.some((item, idx) => {
+
+            $(item.id).mousemove(function (event) {
+                $(item.id).fadeOut(500);
+                setTimeout(function () {
+                    $(item.id).text(item.after)
+                }, 500);
+                $(item.id).fadeIn(1000);
+                return true;
             });
+        });
 
-        </script>
+        events.some((item, idx) => {
 
-        <!-- https://tobiasahlin.com/moving-letters/ -->
-        <!-- Effect 11 -->
-        <script>
+            $(item.id).mouseleave(function (event) {
+                $(item.id).fadeOut(500);
+                setTimeout(function () {
+                    $(item.id).text(item.before)
+                }, 500);
+                $(item.id).fadeIn(1000);
+                return true;
+            });
+        });
+
+
+
+    </script>
+
+    <!-- Effect 11 -->
+    <script>
             // Wrap every letter in a span
             var textWrapper = document.querySelector('.ml11 .letters');
             textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
@@ -360,10 +374,10 @@
                     easing: "easeOutExpo",
                     delay: 3000
                 });
-        </script>
+    </script>
 
-        <!-- Effect 12 -->
-        <script>
+    <!-- Effect 12 -->
+    <script>
             // Wrap every letter in a span
             var textWrapper = document.querySelector('.ml12');
             textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -385,10 +399,10 @@
                     duration: 1100,
                     delay: (el, i) => 400 + 30 * i
                 });
-        </script>
+    </script>
 
-        <!-- Effect 5 -->
-        <script>
+    <!-- Effect 5 -->
+    <script>
             anime.timeline({ loop: true })
                 .add({
                     targets: '.ml5 .line',
@@ -429,7 +443,7 @@
                     easing: "easeOutExpo",
                     delay: 3000
                 });
-        </script>
+    </script>
 </body>
 
 </html>
