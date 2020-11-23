@@ -145,7 +145,7 @@
                         <span class="letters">網頁設計</span>
                     </span>
                 </h3>
-                <!-- <h2>網頁設計</h2> -->
+             
                 <ul>
                     <li>HTML5</li>
                     <li>CSS3</li>
@@ -159,7 +159,7 @@
         <div class="item"><img src="public.img/Resume/designxgraphic.jpg" alt="">
             <div class="txt">
                 <h3 class="ml12">平面設計</h3>
-                <!-- <h2>平面設計</h2> -->
+              
                 <ul>
                     <li>Photoshop</li>
                     <li>Illustrator </li>
@@ -177,7 +177,7 @@
                         <span class="line line2"></span>
                     </span>
                 </h3>
-                <!-- <h3>商業配樂</h3> -->
+               
                 <ul>
                     <li>Acoustic Guitar</li>
                     <li>Electric Guitar</li>
@@ -238,11 +238,11 @@
         </div>
     </div>
 
-    <!-- Portfolios x Bootstrap -->
+    <!-- Task x Javascript -->
     <!-- <div class="title">
-            <p id="bootstrap">Portfolios x Bootstrap</p>
+            <p id="javascript">Task x Javascript</p>
         </div>
-        <div class="container portfolios bootstrap">
+        <div class="container portfolios">
             <div class="item">
                 <a href="Bootstrap 002.html" target="_blank">
                     <div class="bg-img" style="background-image: url(https://picsum.photos/300/300?radom=22);"></div>
@@ -273,7 +273,7 @@
     <div class="title">
         <p id="react">Task x React</p>
     </div>
-    <div class="container portfolios react">
+    <div class="container portfolios">
         <div class="item">
             <a href="React.01 The React.js Time/React.01.html" target="_blank">
                 <div class="bg-img" style="background-image: url(public.img/Resume/React.01.jpg);"></div>
@@ -307,7 +307,7 @@
         const events = [
             { id: '#skill', before: 'Skill', after: '技能' },
             { id: '#css', before: 'Portfolios x CSS', after: '作品集 x CSS' },
-            { id: '#bootstrap', before: 'Portfolios x Bootstrap', after: '作品集 x Bootstrap' },
+            { id: '#javascript', before: 'Task x Javascript', after: '課題 x Javascript' },
             { id: '#react', before: 'Task x React', after: '課題 x React' }
 
         ];
@@ -318,19 +318,19 @@
                 $(item.id).stop(true).fadeOut(300);
                 setTimeout(function () {
                     $(item.id).text(item.after)
-                }, 400);
-                $(item.id).fadeIn(600);
+                }, 350);
+                $(item.id).fadeIn(700);
             });
         });
 
-        events.some((item, idx) => {
+        events.forEach((item, idx) => {
 
             $(item.id).mouseleave(function (event) {
                 $(item.id).stop(true).fadeOut(300);
                 setTimeout(function () {
                     $(item.id).text(item.before)
-                }, 400);
-                $(item.id).fadeIn(600);
+                }, 350);
+                $(item.id).fadeIn(700);
             });
         });
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #audios {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* canvas {}
+        audio { } */
+
+        #btns {
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 99;
+        }
+
+        #btns button {
+            background-color: transparent;
+            color: whitesmoke;
+            font-size: 3rem;
+            width: 200px;
+            height:200px;
+        }
+        #btns span{
+            display: inline-block;
+            color: whitesmoke;
+            font-size: 2rem;
+            padding: 0 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="audios">
+        <canvas id="canvas"></canvas>
+        <audio id="music" src="./mixkit-sleepy-cat-135.mp3"></audio>
+    </div>
+
+    <div id="btns">
+        <button onclick="audioPlay()">Play</button>
+        <span>or</span>
+        <button onclick="audioPause()">Pause</button>
+    </div>
+
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const audioCtx = new AudioContext();
+
+        function audioPause() {
+            audio.pause();
+        };
+        function audioPlay() {
+            audio.play();
+            source.connect(analyser);
+            analyser.connect(gain)
+            gain.connect(audioCtx.destination);
+            // audioCtx.resume().then(() => {
+            //     console.log('Playback resumed successfully');
+            // });
+        }
+
+        const audio = document.querySelector('audio');
+        const source = audioCtx.createMediaElementSource(audio);
+        const analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 1024;
+        const gain = audioCtx.createGain();
+        gain.gain.value = 1;
+
+        const bufferLength = analyser.frequencyBinCount;
+        const dataArray = new Uint8Array(bufferLength);
+        // analyser.getByteFrequencyData(dataArray)
+
+
+
+
+        const canvas = document.querySelector('canvas');
+        canvas.style.position = 'absolute';
+        canvas.style.top = 0;
+        canvas.style.right = 0;
+        canvas.style.bottom = 0;
+        canvas.style.left = 0;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const canvasCtx = canvas.getContext('2d');
+        canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
+
+        function draw() {
+
+            requestAnimationFrame(draw);
+
+            analyser.getByteFrequencyData(dataArray);
+
+            canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+            canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
+
+            const barWidth = (canvas.width / bufferLength) * 2;
+            let posX = 0;
+            let red = Math.round(Math.random()*255);
+            let green = Math.round(Math.random()*255);
+            let blue = Math.round(Math.random()*255);
+            
+            for (let i = 0; i < bufferLength; i++) {
+                const barHeight = (dataArray[i] + 0) * 3;
+                canvasCtx.fillStyle = 'rgb(' + Math.floor(barHeight + 100) + ','+ green +','+ blue +')';
+                canvasCtx.fillRect(posX, canvas.height - barHeight / 2, barWidth, barHeight / 2);
+                posX += barWidth + .5;
+            }
+        };
+
+        draw();
+
+    </script>
+</body>
+
+</html>
